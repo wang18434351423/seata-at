@@ -6,6 +6,7 @@ import cn.yyf.order.feign.EasyIdGeneratorClient;
 import cn.yyf.order.feign.StorageClient;
 import cn.yyf.order.mapper.OrderMapper;
 import cn.yyf.order.service.OrderService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private EasyIdGeneratorClient easyIdGeneratorClient;
 
+    @GlobalTransactional
     @Override
     public void create(Order order) {
         //从全局唯一id发号器获得id，这里暂时随机产生一个 orderId

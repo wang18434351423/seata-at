@@ -15,6 +15,10 @@ easy-id-generator:
 spring:
   application:
     name: easy-id-generator
+    cloud:
+      alibaba:
+        seata:
+          tx-service-group: order_tx_group
 eureka:
   client:
     service-url:

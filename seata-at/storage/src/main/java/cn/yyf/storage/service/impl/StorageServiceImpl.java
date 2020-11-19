@@ -4,6 +4,7 @@ import cn.yyf.storage.mapper.StorageMapper;
 import cn.yyf.storage.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author wangchen
